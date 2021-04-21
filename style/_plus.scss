@@ -1,37 +1,51 @@
 .plus {
     max-width: 1160px;
     margin: auto;
-    &__list {
-        max-width: 500px;
-        padding-left: 25px;
-        margin-top: 40px;
-        &-item {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 140%;
-            color: #ffffff;
-            margin-bottom: 20px;
-        }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 979px;
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 50px;
+    }
+    &__info-text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: #000000;
+        margin-top: 32px;
+    }
+    &__info-img {
+        display: block;
+        max-width: 979px;
+        height: 582px;
+        margin-top: 65px;
     }
     &__input {
         display: none;
     }
     &__label {
-        font-weight: 600;
-        font-size: 15px;
-        line-height: 150%;
-        letter-spacing: 0.01em;
-        text-transform: uppercase;
-        color: #ffffff;
-        padding: 13px 30px 14px 30px;
+        display: flex;
+
+        justify-content: center;
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: #000000;
+
+        padding: 18px 31px;
         cursor: pointer;
-        background-color: #2f2f2f;
-        border-radius: 100px;
-        margin-right: 10px;
+        border: 1px solid #e5e5e5;
+
         &-wrap {
             display: flex;
-            margin-bottom: 40px;
+            justify-content: center;
+            margin-top: 163px;
         }
     }
     &__body {
@@ -40,28 +54,41 @@
         margin-top: 40px;
     }
 }
-#list0:checked ~ .plus__label-wrap #list0label,
-#list1:checked ~ .plus__label-wrap #list1label,
-#list2:checked ~ .plus__label-wrap #list2label,
-#list3:checked ~ .plus__label-wrap #list3label,
-#list4:checked ~ .plus__label-wrap #list4label {
-    background-color: #3264ef;
-}
 
-#list0:checked ~ #plus-body0,
-#list1:checked ~ #plus-body1,
-#list2:checked ~ #plus-body2,
-#list3:checked ~ #plus-body3,
-#list4:checked ~ #plus-body4 {
+#info0:checked ~ .plus__label-wrap #info0label,
+#info1:checked ~ .plus__label-wrap #info1label,
+#info2:checked ~ .plus__label-wrap #info2label,
+#info3:checked ~ .plus__label-wrap #info3label {
+    background-color: #afb1b3;
+    color: #ffffff;
+}
+#info0:checked ~ #plus-body0,
+#info1:checked ~ #plus-body1,
+#info2:checked ~ #plus-body2,
+#info3:checked ~ #plus-body3 {
     display: flex;
 }
 
 @media screen and (max-width: 1010px) {
     .plus {
-        &__list {
+        &__info {
             max-width: 100%;
             margin-top: 0;
             margin-bottom: 13px;
+        }
+        &__info-text {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin-top: 32px;
+            padding: 40px;
+        }
+        &__info-img {
+            max-width: 90%;
+            height: auto;
+           margin: 15px;
         }
         &__body {
             flex-direction: column;
@@ -83,15 +110,20 @@
                 margin-bottom: 0;
             }
         }
-        &__list {
+        &__info {
             max-width: 100%;
             margin-top: 0;
+            padding: 15px;
             margin-bottom: 13px;
-            &-item {
-                font-size: 12px;
-                line-height: 140%;
-                margin-bottom: 12px;
-            }
+        }
+        &__info-text {
+            padding: 15px;
+            margin-top: 32px;
+        }
+        &__info-img {
+            max-width: 90%;
+            height: auto;
+                       margin: 20px;
         }
         &__body {
             margin-top: 14px;
@@ -102,5 +134,17 @@
                 width: 100%;
             }
         }
+    }
+}
+@media screen and (max-width: 450px) {
+    .plus {
+        &__info-text {
+            
+            font-size: 15px;
+            line-height: 17px;
+            color: #000000;
+            
+        }
+
     }
 }
